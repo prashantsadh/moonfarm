@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .parent{
+
+        border-radius: 100px;
+
+        height: 100vh;
+        width: 100vw;
+        padding-top: 50px;
+        background-color: rgb(0, 10, 10);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box{
+        border: 4px solid black;
+        border-radius: 50px;
+        height: 60%;
+        width: 25%;
+        padding: 50px;
+        background-color: darkgray;
+    }
+        .heading{
+            margin: 5px 0px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        }
+    
+    .justifycenter{
+        display: flex;
+        justify-content: center;
+    }
+    .fieldbox{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        padding: 10px 10px; 
+    }
+    .inputfield{
+        background-color: antiquewhite;
+        width: 200px;
+        height: 30px;
+
+    }
+    .box:hover{
+        background-color: lightskyblue;
+    }
+    .alinecenter{
+
+        display: flex;
+        align-items: center;
+        padding-left: 275px;
+    }
+    h1:hover{
+
+        color: red;
+
+    }
+</style>
+<body>
+    <div class="parent ">
+        <div class="box " >
+            <div class="heading">
+                <h1>Calculator</h1>
+             </div>
+            
+              <div class="fieldbox justifycenter">
+                     <label >First Number :- </label>
+                    <input id="firstn" type="number" class="inputfield">
+              </div>
+            
+            <div class="fieldbox justifycenter" >
+                <label>Secod Number :- </label>
+                <input type="number" id="secondn" class="inputfield">
+              </div>
+              
+                 <div class="fieldbox justifycenter">
+                     <label> Operator :- </label>
+                    <select  id="opr" class="inputfield" required  onchange="cal()"> 
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </div>
+                <div class="fieldbox justifycenter">
+                    <label > Operator</label>
+                    <radio id="opr"  required onchange="cal()">
+
+                </div>
+                
+                
+               
+            
+            <div class="fieldbox justifycenter">
+
+                <div>
+                    <label for="text">Result</label>
+                    <input id="result" type="text" class="inputfield">
+                </div>
+
+            </div>
+
+
+        </div>
+            
+
+    </div>
+    <script>
+        function cal(){
+         var first= document.getElementById("firstn").value;
+         var two= document.getElementById("secondn").value;
+         var op = document.getElementById("opr").value;
+         if (op=='+') {
+            var res= parseInt(first)+parseInt(two);
+         }
+         if (op=='-') {
+            var res= parseInt(first)-parseInt(two);
+         }
+         if (op=='*') {
+            var res= parseInt(first)*parseInt(two);
+         }
+         if (op=='/') {
+            var res= parseInt(first)/parseInt(two);
+         }
+           document.getElementById("result").value=res;
+        }
+    </script>
+</body>
+</html>

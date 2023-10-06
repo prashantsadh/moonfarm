@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #parent_div{
+            width: 100vw;
+            height: 100vh;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .form_box{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(94, 37, 37);
+            color: rgb(141, 188, 228);
+            border-radius: 10px;
+            
+        }
+        .horizontalcenter{
+            display: flex;
+            justify-content: center;
+            margin: 10px 5px;
+            
+        }
+        .heading{
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .fieldbox1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid white;
+        }
+        .inputfield{
+            width: 200px;
+            height: 30px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color:rgb(20, 47, 153);
+        }
+        .displaycolumn{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-weight: 600;
+        }
+        .button{
+            font-size: 5px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+        }
+        .box2{
+            height: 100%;
+            width: 100%;
+            background-color: crimson;
+        }
+        /* .inputfield{
+            background-color: aquamarine;
+            width: 100px;
+            height: 29px;
+            padding: 20px 0px;
+        } */
+        
+    </style>
+</head>
+<body>
+    <div id="parent_div">
+        <div class="form_box"> 
+            <div class="horizontalcenter heading">
+                <h2>Registration Form</h2>
+            </div>
+            <hr>
+            <form>
+                <div class="fieldbox1">
+                    <div class="displaycolumn" >
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" class="inputfield" placeholder="Enter First Name" required  onkeyup="showname()">
+                    </div>
+                    <div class="displaycolumn">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" class="inputfield" placeholder="Enter Last Name" onkeyup="showlastname()" >
+                    </div>
+                </div>
+                <div class="fieldbox1">
+                    <div class="displaycolumn">
+                        <label for="bdate">Date Of Birth</label>
+                        <input type="date" id="bdate" class="inputfield" onchange="showdateofbirth()">
+                    </div>
+                    <div class="displaycolumn">
+                        <label for="cnumber">Contact Number</label>
+                        <input type="text" id="cnumber" class="inputfield" placeholder="Enter 10 Digits Numbers" maxlength="10" onkeyup="showcontact()">
+                    </div>
+                </div>
+                <div class="fieldbox1">
+                    <div class="displaycolumn">
+                        <label for="email">Email </label>
+                        <input type="email" id="email" class="inputfield" placeholder="Enter Your Email " onkeyup="showemail()" >
+                    </div>
+                    <div class="displaycolumn">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" class="inputfield" placeholder="Enter Your Address "onkeyup= "showaddress()" >
+                    </div>
+                </div>
+                <div >
+                    <textarea rows="8" cols="15">
+
+                    </textarea>
+
+                </div>
+                 <div class="button"> 
+                     <button>
+                        <label for="button">Submit</label>
+                        <input type="button" id="button">
+                     </button>
+                     <label for="button"></label>
+                     <button onclick="hideinputfield()" type="button">
+                       <b>Hide</b>  
+                     </button>
+                     <label for="button"></label>
+                     <button onclick="showinputfield()" type="button">
+                        <b>show</b>  
+                      </button>
+                 </div> 
+
+                 
+            </form>
+            
+        </div>
+          <div class="box2">
+            <!-- <div id="form_box"> -->
+                <div class="horizontalcenter heading">
+                    <h2>Entered Information</h2>
+                </div>
+                <hr>
+                <form>
+                    <div class="fieldbox1">
+                        <div class="displaycolumn" >
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname_value" class="inputfield" placeholder="Enter First Name" >
+                        </div>
+                        <div class="displaycolumn">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname_value" class="inputfield" placeholder="Enter Last Name" required >
+                        </div>
+                    </div>
+                    <div class="fieldbox1">
+                        <div class="displaycolumn">
+                            <label for="bdate">Date Of Birth</label>
+                            <input type="date" id="bdate_value" class="inputfield" required >
+                        </div>
+                        <div class="displaycolumn">
+                            <label for="cnumber">Contact Number</label>
+                            <input type="text" id="cnumber_value" class="inputfield" placeholder="Enter 10 Digits Numbers" maxlength="10" required >
+                        </div>
+                    </div>
+                    <div class="fieldbox1">
+                        <div class="displaycolumn">
+                            <label for="email">Email </label>
+                            <input type="text" id="email_value" class="inputfield" placeholder="Enter Your Email " >
+                        </div>
+                        <div class="displaycolumn">
+                            <label for="address">Address</label>
+                            <input type="text" id="address_value" class="inputfield" placeholder="Enter Your Address ">
+                        </div>
+                    </div>
+                    
+    
+                     
+                </form>
+                
+            </div>
+           
+          </div>
+
+    </div>
+</body>
+<script>
+  function showname(){
+    const fname = document.getElementById("fname").value 
+    document.getElementById("fname_value").value = fname
+  }
+  function showlastname(){
+    const lname =document.getElementById("lname").value
+    document.getElementById("lname_value").value = lname
+  }
+  function showdateofbirth(){
+    const bdate = document.getElementById("bdate").value
+    document.getElementById("bdate_value").value =  bdate
+  }
+  function showcontact(){
+    const cnumber = document.getElementById("cnumber").value
+    document.getElementById("cnumber_value").value = cnumber
+
+  }
+  function showemail(){
+    const email = document.getElementById("email").value
+    document.getElementById("email_value").value = email
+  }
+  function showaddress(){
+    const address = document.getElementById("address").value
+    document.getElementById("address_value").value = address
+}
+function showinputfield() {
+        document.getElementById("fname_value").style.display = "block"
+            document.getElementById("lname_value").style.display = "block"
+            document.getElementById("email_value").style.display = "block"
+            document.getElementById("bdate_value").style.display = "block"
+            document.getElementById("address_value").style.display = "block"
+            document.getElementById("cnumber_value").style.display = "block"
+
+    }
+        function hideinputfield()  {
+            document.getElementById("fname_value").style.display = "none"
+            document.getElementById("lname_value").style.display = "none"
+            document.getElementById("email_value").style.display = "none"
+            document.getElementById("bdate_value").style.display = "none"
+            document.getElementById("address_value").style.display = "none"
+            document.getElementById("cnumber_value").style.display = "none"
+
+        }
+
+</script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #parent_div{
+            width: 100vw;
+            height: 100vh;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #form_box{
+            width: 800px;
+            height: 500px;
+            background-color: black;
+            color: aliceblue;
+            border-radius: 10px;
+            
+        }
+        .horizontalcenter{
+            display: flex;
+            justify-content: center;
+            margin: 10px 5px;
+            
+        }
+        .heading{
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .fieldbox1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid white;
+        }
+        .inputfield{
+            width: 200px;
+            height: 30px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color:pink;
+        }
+        .displaycolumn{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-weight: 600;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="parent_div">
+        <div id="form_box">
+            <div class="horizontalcenter heading">
+                <h2>Registration Form</h2>
+            </div>
+            <hr>
+            <form>
+                <div class="fieldbox1">
+                    <div class="displaycolumn" >
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" class="inputfield" placeholder="Enter First Name" >
+                    </div>
+                    <div class="displaycolumn">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" class="inputfield" placeholder="Enter Last Name">
+                    </div>
+                </div>
+                <div class="fieldbox1">
+                    <div class="displaycolumn">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" class="inputfield" placeholder="Enter First Name" >
+                    </div>
+                    <div class="displaycolumn">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" class="inputfield" placeholder="Enter Last Name">
+                    </div>
+                </div>
+                <div class="fieldbox1">
+                    <div class="displaycolumn">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" class="inputfield" placeholder="Enter First Name" >
+                    </div>
+                    <div class="displaycolumn">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" class="inputfield" placeholder="Enter Last Name">
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+        <div class="box2">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+             background-color: black;
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+             font-size: xx-large
+        }
+    </style>
+
+</head>
+<body>
+    
+    <p id="message">
+        <script>
+            
+            let currentHours=new Date().getHours()
+            if(currentHours>=0 && currentHours < 12){
+                document.write("Good Morning")
+                document.getElementById("message").style.color="green"
+            }
+            else if(currentHours > 12 && currentHours < 17){
+                document.write('Good Afternoon')
+                document.getElementById("message").style.color="Yellow"
+            }
+            else{
+                document.write("Good Evening")
+                document.getElementById("message").style.color="violet"
+             }
+            
+            
+    
+        </script>
+
+
+
+
+</body>
+</html>

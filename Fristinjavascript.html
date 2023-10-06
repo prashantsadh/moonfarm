@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <form >
+    <label >NAME</label>
+  <input id="Name" type="text" onkeyup="showvalue()">
+<p id="name_para"></p>
+<input type="text" id="name_input" style="display: none;">
+<br>
+
+<button onclick="showinputfield()" type="button">
+    show input value 
+</button>
+<button onclick="hideinputfield()" type="button">
+    hide input value
+</button>
+
+ </form>
+</body>
+<script>
+function showinputfield(){
+    document.getElementById("name_input").style.display = "block"
+}
+function hideinputfield(){
+    document.getElementById("name_input").style.display = "none"
+    
+}
+function showvalue(){
+   let name = document.getElementById("Name").value
+   document.getElementById("name_para").innerText = name
+   document.getElementById("name_para").style.fontSize ="40px"
+   document.getElementById("name_para").style.color ="green"
+   document.getElementById("name_input").value = name
+    console.log(name)
+}
+</script>
+</html>
